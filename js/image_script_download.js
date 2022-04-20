@@ -1,11 +1,11 @@
 function downloadImg() {
     var img = new Image();
-    img.src = "./images/Eid1443.jpg";
+    img.src = "./images/Eid1443.png";
     var canvas = document.createElement("CANVAS");
     var context = canvas.getContext("2d");
 
     img.onload = function() {
-        var fileName = 'GACA-Eid-1443.jpg';
+        var fileName = 'GACA-Eid-1443.png';
         context.canvas.width = img.width;
         context.canvas.height = img.height;
         context.drawImage(img, 0, 0, img.width, img.height);
@@ -17,11 +17,11 @@ function downloadImg() {
         context.fillText(name, 752, 1970);
 
         if (window.navigator.msSaveBlob) { // IE
-            var image = canvas.toDataURL("image/jpeg");
+            var image = canvas.toDataURL("image/png");
             var blob = createBlob(image);
             window.navigator.msSaveOrOpenBlob(blob, fileName);
         } else if (navigator.userAgent.search("Firefox") !== -1) { // Firefox
-            var image = canvas.toDataURL("image/jpeg");
+            var image = canvas.toDataURL("image/png");
             var blob = createBlob(image);
             var url = window.URL.createObjectURL(blob);
 
@@ -36,7 +36,7 @@ function downloadImg() {
             window.URL.revokeObjectURL(url);
 
         } else { // Chrome
-            var image = canvas.toDataURL("image/jpeg");
+            var image = canvas.toDataURL("image/png");
             var link = document.createElement('a');
             link.href = image;
             link.download = fileName;
