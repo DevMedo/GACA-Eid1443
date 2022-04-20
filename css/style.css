@@ -1,0 +1,257 @@
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #243d7f url(../images/background.png) 100% no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body,
+h1,
+h3 {
+    font-family: 'GR';
+    color: #243d7f;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    width: 40vw;
+    height: 81.965vh;
+    margin: 5.5vh auto;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: #f2f2f2 url(../images/bg.png) 100%/100%;
+}
+
+.GInput {
+    margin: 15px auto;
+    box-sizing: border-box;
+    font-family: 'GR';
+    font-size: 24px;
+    color: #243d7f;
+    vertical-align: middle;
+    margin-bottom: inherit;
+    padding: 10px 10px;
+    /*width: 100%;*/
+    direction: rtl;
+    border: 0px solid #a6a6a6;
+    border-radius: 10px;
+    background-color: white;
+    font-family: "GR" !important;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: inset 0px 5px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.GInput:hover {
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.GInput:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.GInput:focus::-moz-placeholder {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.GInput:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.GInput:focus:-moz-placeholder {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.GInput:focus {
+    color: #4b515d;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.downloadBTN {
+    margin: 15px auto;
+    padding: 10px 40px;
+    font-family: "GB" !important;
+    font-size: 22px;
+    color: white;
+    border-radius: 15px!important;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    transition: 0.4s;
+    background-color: rgb(0, 168, 134);
+}
+
+.downloadBTN:hover {
+    transition: 0.4s;
+    background-color: rgb(11, 102, 84);
+}
+
+.img_ramadan_1442 {
+    width: 100%;
+}
+
+.table_class {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+.logo_image {
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.eid_1 {
+    font-family: 'GB';
+    color: #0075c9;
+    font-size: 77px;
+    margin-bottom: 5px;
+}
+
+.eid_2 {
+    font-family: 'GB';
+    font-weight: 100;
+    color: #0075c9;
+    font-size: 55px;
+    margin-bottom: 50px;
+}
+
+.eid_3 {
+    font-family: 'GB';
+    color: #0075c9;
+    font-size: 30px;
+}
+
+.eid_4 {
+    margin-top: 30px;
+    font-family: 'GR';
+    color: #0075c9;
+    font-size: 25px;
+}
+
+.eid_5 {
+    font-family: 'GR';
+    color: #0075c9;
+    font-size: 28px;
+    float: right;
+    margin: 15px auto;
+    padding: 10px 0px;
+}
+
+.enteryourname {
+    text-align: center;
+    direction: rtl;
+    font-family: 'GB';
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 1282px) {
+    .center {
+        width: 51.485vw;
+        height: 82.376vh;
+        margin: 5.5vh auto;
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+    .center {
+        width: 65.43vw;
+        height: 83.75vh;
+        margin: 5.5vh auto;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    body {
+        width: auto;
+        height: 100%;
+    }
+    .center {
+        width: 90vw;
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 3vh auto;
+    }
+    .eid_1 {
+        font-family: 'GB';
+        color: #0075c9;
+        font-size: 60px;
+        margin-bottom: 5px;
+    }
+    .eid_2 {
+        font-family: 'GB';
+        font-weight: 100;
+        color: #0075c9;
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .eid_3 {
+        font-family: 'GB';
+        color: #0075c9;
+        font-size: 22px;
+    }
+    .eid_4 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .eid_5 {
+        font-family: 'GR';
+        color: #0075c9;
+        font-size: 28px;
+        float: none;
+        margin: 15px auto;
+        padding: 10px 0px;
+    }
+    .table_class {
+        margin-top: 10px;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    .logo_image {
+        width: 180px;
+        padding: 20px;
+    }
+    .image_congratulations {
+        width: 240px;
+        padding: 20px;
+    }
+    .enteryourname {
+        font-size: 4.5vw;
+    }
+    .GInput {
+        margin: 10px auto;
+        box-sizing: border-box;
+        font-family: 'GR';
+        font-size: 20px;
+        width: 100%;
+    }
+    .downloadBTN {
+        margin: 10px auto;
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 24px;
+    }
+}
