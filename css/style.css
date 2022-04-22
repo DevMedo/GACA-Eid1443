@@ -364,7 +364,10 @@ label img {
         transition-duration: 0.2s;
         transform-origin: 50% 50%;
     }
+}
+
+@media(hover: hover) and (pointer: fine) {
     label:hover {
-        background-color: transparent;
+        /* Targeting devices with mouse cursor and :hover */
     }
 }
