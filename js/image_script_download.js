@@ -7,6 +7,15 @@ function choose_image() {
     }
     document.getElementsByClassName('eid_4')[0].innerText = "فضلاً قم بإختيار القالب الذي تفضل";
 }
+User_name = document.getElementById('uName');
+User_name.addEventListener('change', function() {
+    if (User_name.value != '' && User_name.value != ' ') {
+        document.getElementById('next_button').removeAttribute("disabled");
+    } else {
+        console.log('it is empty mate')
+        document.getElementById('next_button').setAttribute("disabled", "true");
+    }
+});
 checkboxes = document.getElementsByName("template_cbs");
 
 checkboxes.forEach(function(checkbox) {
@@ -18,6 +27,12 @@ checkboxes.forEach(function(checkbox) {
         document.getElementById('downloadLNK').removeAttribute("disabled");
         my_selected_label = document.querySelector("label[for='" + checkbox.id + "']")
         desired_image_src = my_selected_label.getElementsByTagName('img')[0].src.split('/').pop()
+
+        if (image_src.split('').pop() == "1.jpg") {
+            desired_image_src = "eid_1_1443.jpg"
+        } else {
+            desired_image_src = "eid_2_1443.jpg"
+        }
     })
 });
 
@@ -31,32 +46,38 @@ function downloadImg() {
 
 
     img.onload = function() {
-        var fileName = 'GACA-Eid-1443.png';
+        var fileName = 'GACA-Eid-1443.jpg';
         context.canvas.width = img.width;
         context.canvas.height = img.height;
         context.drawImage(img, 0, 0, img.width, img.height);
         var name = document.getElementById("uName").value;
 
-        if (desired_image_src == "eid_1_1443.png") {
+        if (desired_image_src == "eid_1_1443.jpg") {
+            //if (desired_image_src == "example_1.jpg") {
             // Dark
+            //context.fillStyle = "grey";
             context.fillStyle = "#FFF";
-            context.font = "186px GB";
+            context.font = "71.5px GB";
             context.textAlign = "center";
-            context.fillText(name, 2040, 2605);
-        } else if (desired_image_src == "eid_2_1443.png") {
+            context.fillText(name, 784.5, 1000);
+        } else if (desired_image_src == "eid_2_1443.jpg") {
+            //} else if (desired_image_src == "example_2.jpg") {
+
+
             // White Bluish
+            //context.fillStyle = "grey";
             context.fillStyle = "#2574bb";
-            context.font = "163px GB";
+            context.font = "62.5px GB";
             context.textAlign = "center";
-            context.fillText(name, 2042, 2737);
+            context.fillText(name, 785, 1051);
         }
 
         if (window.navigator.msSaveBlob) { // IE
-            var image = canvas.toDataURL("text/plain");
+            var image = canvas.toDataURL("image/jpeg");
             var blob = createBlob(image);
             window.navigator.msSaveOrOpenBlob(blob, fileName);
         } else if (navigator.userAgent.search("Firefox") !== -1) { // Firefox
-            var image = canvas.toDataURL("text/plain");
+            var image = canvas.toDataURL("image/jpeg");
             var blob = createBlob(image);
             var url = window.URL.createObjectURL(blob);
 
@@ -73,7 +94,7 @@ function downloadImg() {
         }
 
         // else if (navigator.userAgent.search("Safari") !== -1) { // Safari
-        //     var image = canvas.toDataURL("text/plain");
+        //     var image = canvas.toDataURL("image/jpeg");
         //     var blob = createBlob(image);
         //     var url = window.URL.createObjectURL(blob);
 
@@ -88,7 +109,7 @@ function downloadImg() {
         //     window.URL.revokeObjectURL(url);
         // }
         else { // Chrome
-            var image = canvas.toDataURL("text/plain");
+            var image = canvas.toDataURL("image/jpeg");
             var link = document.createElement('a');
             link.href = image;
             link.download = fileName;

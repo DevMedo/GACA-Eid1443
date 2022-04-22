@@ -41,12 +41,12 @@ h3 {
     margin: 15px auto;
     box-sizing: border-box;
     font-family: 'GR';
-    font-size: 24px;
+    font-size: 22px;
     color: #243d7f;
     vertical-align: middle;
     margin-bottom: inherit;
     padding: 10px 10px;
-    /*width: 100%;*/
+    width: 100%;
     direction: rtl;
     border: 0px solid #a6a6a6;
     border-radius: 10px;
@@ -118,7 +118,7 @@ h3 {
 }
 
 .table_class {
-    width: 30%;
+    width: 38%;
     margin-left: auto;
     margin-right: auto;
     text-align: center
