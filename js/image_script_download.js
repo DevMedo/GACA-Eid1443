@@ -23,7 +23,9 @@ checkboxes.forEach(function(checkbox) {
 
 function downloadImg() {
     var img = new Image();
+    console.log(desired_image_src)
     img.src = "./images/" + desired_image_src;
+    console.log(img.src)
     var canvas = document.createElement("CANVAS");
     var context = canvas.getContext("2d");
 
@@ -50,11 +52,11 @@ function downloadImg() {
         }
 
         if (window.navigator.msSaveBlob) { // IE
-            var image = canvas.toDataURL("image/png");
+            var image = canvas.toDataURL("text/plain");
             var blob = createBlob(image);
             window.navigator.msSaveOrOpenBlob(blob, fileName);
         } else if (navigator.userAgent.search("Firefox") !== -1) { // Firefox
-            var image = canvas.toDataURL("image/png");
+            var image = canvas.toDataURL("text/plain");
             var blob = createBlob(image);
             var url = window.URL.createObjectURL(blob);
 
@@ -71,7 +73,7 @@ function downloadImg() {
         }
 
         // else if (navigator.userAgent.search("Safari") !== -1) { // Safari
-        //     var image = canvas.toDataURL("image/png");
+        //     var image = canvas.toDataURL("text/plain");
         //     var blob = createBlob(image);
         //     var url = window.URL.createObjectURL(blob);
 
@@ -86,7 +88,7 @@ function downloadImg() {
         //     window.URL.revokeObjectURL(url);
         // }
         else { // Chrome
-            var image = canvas.toDataURL("image/png");
+            var image = canvas.toDataURL("text/plain");
             var link = document.createElement('a');
             link.href = image;
             link.download = fileName;
