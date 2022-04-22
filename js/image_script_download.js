@@ -8,7 +8,7 @@ function choose_image() {
     document.getElementsByClassName('eid_4')[0].innerText = "فضلاً قم بإختيار القالب الذي تفضل";
 }
 User_name = document.getElementById('uName');
-User_name.addEventListener('change', function() {
+User_name.addEventListener('keyup', function() {
     if (User_name.value != '' && User_name.value != ' ') {
         document.getElementById('next_button').removeAttribute("disabled");
     } else {
