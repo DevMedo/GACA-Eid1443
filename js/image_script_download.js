@@ -12,7 +12,6 @@ User_name.addEventListener('keyup', function() {
     if (User_name.value != '' && User_name.value != ' ') {
         document.getElementById('next_button').removeAttribute("disabled");
     } else {
-        console.log('it is empty mate')
         document.getElementById('next_button').setAttribute("disabled", "true");
     }
 });
@@ -26,9 +25,9 @@ checkboxes.forEach(function(checkbox) {
             .map(i => i.value) // Use Array.map to extract only the checkbox values from the array of objects.
         document.getElementById('downloadLNK').removeAttribute("disabled");
         my_selected_label = document.querySelector("label[for='" + checkbox.id + "']")
-        desired_image_src = my_selected_label.getElementsByTagName('img')[0].src.split('/').pop()
+        image_src = my_selected_label.getElementsByTagName('img')[0].src.split('/').pop()
 
-        if (image_src.split('').pop() == "1.jpg") {
+        if (image_src.split('_').pop() == "1.jpg") {
             desired_image_src = "eid_1_1443.jpg"
         } else {
             desired_image_src = "eid_2_1443.jpg"
@@ -38,9 +37,7 @@ checkboxes.forEach(function(checkbox) {
 
 function downloadImg() {
     var img = new Image();
-    console.log(desired_image_src)
     img.src = "./images/" + desired_image_src;
-    console.log(img.src)
     var canvas = document.createElement("CANVAS");
     var context = canvas.getContext("2d");
 
