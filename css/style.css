@@ -99,6 +99,12 @@ h3 {
     background-color: rgb(0, 168, 134);
 }
 
+.downloadBTN:disabled,
+.downloadBTN:disabled:hover {
+    background-color: rgba(0, 168, 134, 0.242);
+    cursor: not-allowed;
+}
+
 .downloadBTN:hover {
     transition: 0.4s;
     background-color: rgb(11, 102, 84);
@@ -119,6 +125,7 @@ h3 {
     display: block;
     margin: 0 auto;
     padding: 40px;
+    width: 160px;
 }
 
 .eid_1 {
@@ -165,11 +172,95 @@ h3 {
     font-size: 1.4rem;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: table-cell;
+}
+
+input[type="radio"][id^="cb"] {
+    display: none;
+}
+
+label {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+label:hover {
+    background-color: rgba(0, 117, 201, 0.7);
+}
+
+label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+label img {
+    height: 165px;
+    width: 165px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+ :checked+label {
+    border-color: rgb(0, 168, 134);
+    background: rgba(0, 168, 134, 0.3);
+}
+
+ :checked+label:before {
+    content: "✓";
+    background-color: rgb(0, 168, 134);
+    transform: scale(1);
+}
+
+ :checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
 @media only screen and (max-width: 1282px) {
     .center {
         width: 51.485vw;
         height: 82.376vh;
         margin: 5.5vh auto;
+    }
+    .eid_1 {
+        font-size: 70px;
+        margin-bottom: 5px;
+    }
+    .eid_2 {
+        font-size: 53px;
+        margin-bottom: 15px;
+    }
+    .eid_4 {
+        margin-top: 15px;
+    }
+    label img {
+        height: 145px;
+        width: 145px;
     }
 }
 
@@ -231,7 +322,7 @@ h3 {
         text-align: center
     }
     .logo_image {
-        width: 180px;
+        width: 25vw;
         padding: 20px;
     }
     .image_congratulations {
@@ -253,5 +344,18 @@ h3 {
         padding: 10px 0px;
         width: 100%;
         font-size: 24px;
+    }
+    ul {
+        list-style-type: none;
+        padding-block-start: 0;
+        margin-block-start: 0px;
+        margin-inline-start: 0px;
+        padding-inline-start: 0px;
+    }
+    label img {
+        height: 30vw;
+        width: 30vw;
+        transition-duration: 0.2s;
+        transform-origin: 50% 50%;
     }
 }
